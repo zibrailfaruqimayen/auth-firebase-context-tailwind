@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const handleLogin = (event) => {
@@ -6,6 +7,7 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    console.log(email, password);
   };
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -48,6 +50,9 @@ const Login = () => {
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
+          <Link to="/register">
+            <button className="btn  btn-link">New to Auth Master</button>
+          </Link>
         </div>
       </div>
     </div>
