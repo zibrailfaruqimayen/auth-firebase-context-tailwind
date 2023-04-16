@@ -18,6 +18,14 @@ const Header = () => {
         <Link className="btn btn-ghost normal-case text-xl" to="/">
           Home
         </Link>
+        <Link className="btn btn-ghost normal-case text-xl" to="/orders">
+          Orders
+        </Link>
+        {user && (
+          <Link className="btn btn-ghost normal-case text-xl" to="/profile">
+            Profile
+          </Link>
+        )}
         <Link className="btn btn-ghost normal-case text-xl" to="/login">
           Login
         </Link>
@@ -28,7 +36,7 @@ const Header = () => {
         {user ? (
           <>
             <span>{user.email}</span>
-            <button onClick={handleLogOut} className="btn btn-xs">
+            <button onClick={handleLogOut} className="btn btn-xs ml-10">
               Sign out
             </button>
           </>
